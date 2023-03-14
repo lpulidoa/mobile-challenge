@@ -9,13 +9,13 @@ public class Runner extends Hooks{
     @Test
     public void searchTest(){
         LandingPage landingPage = new LandingPage(driver);
-        landingPage.searchQuery("Endava")
+        landingPage.searchQuery("Colombia")
                 .waitForSearchResults();
 
         ArticlePage articlePage = landingPage.clickFirstResult();
 
         assertThat("The title was not correct",
-                articlePage.getTitle(), equalTo("Endava"));
+                articlePage.getTitle(), equalTo("Colombia"));
     }
 
 }
