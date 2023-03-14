@@ -21,8 +21,8 @@ public class LandingPage extends BasePage{
     private final By searchResultsBy = By.xpath("//a[@class='suggestion-link']");
 
     public LandingPage searchQuery(String query){
-        log.info("Searching for " + query);
         mapToElement(inputTextBy).sendKeys(query);
+        log.info("Searching for " + query);
         return this;
     }
 
