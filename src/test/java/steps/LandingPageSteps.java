@@ -1,27 +1,20 @@
 package steps;
 
-import helpers.DriverHelper;
+import helpers.DriverManager;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.When;
 import org.openqa.selenium.WebDriver;
 import pages.LandingPage;
 
-import static steps.BasePageSteps.driver;
-
 
 public class LandingPageSteps{
 
-//    private WebDriver driver;
-//    private DriverHelper driverHelper;
-//    public LandingPageSteps(DriverHelper driverHelper) {
-//
-//        this.driverHelper = driverHelper;
-//        driver = driverHelper.getDriver();
-//
-//    }
-//    LandingPage landingPage = new LandingPage(driverHelper.getDriver());
+    private DriverManager driverManager;
+    public LandingPageSteps(DriverManager driverManager) {
 
-    LandingPage landingPage = new LandingPage(driver);
+        this.driverManager = driverManager;
+
+    }
 
     @Given("the user wants to make a search")
     public void theUserWantsToMakeASearch() {
@@ -29,6 +22,7 @@ public class LandingPageSteps{
 
     @When("the user searches for {string} in the page")
     public void theUserSearchesForInThePage(String query) {
+        LandingPage landingPage = new LandingPage(driverManager.getDriver());
         landingPage.searchQuery(query).waitForSearchResults();
     }
 }

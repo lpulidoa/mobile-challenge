@@ -4,17 +4,11 @@ package helpers;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-public class DriverHelper {
+public class DriverManager {
     private WebDriver driver;
 
-
-    public void setDriver(){
+    public void createDriver(){
         driver  = new ChromeDriver();
-        driver.manage()
-                .window()
-                .maximize();
-        driver.navigate()
-                .to("https://www.wikipedia.org/");
     }
 
     public WebDriver getDriver() {

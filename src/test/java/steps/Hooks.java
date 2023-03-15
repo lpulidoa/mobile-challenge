@@ -1,5 +1,6 @@
 package steps;
 
+import helpers.DriverManager;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import io.cucumber.java.Scenario;
@@ -8,24 +9,28 @@ import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-public class BasePageSteps {
+public class Hooks {
 
-    public static WebDriver driver;
+    //public static WebDriver driver;
+    private WebDriver driver;
+    private DriverManager driverManager;
+    public Hooks(DriverManager driverManager) {
+
+        this.driverManager = driverManager;
+
+    }
 
     @Before
     public void setUp(){
         System.setProperty("webdriver.http.factory", "jdk-http-client");
-        driver = new ChromeDriver();
-        driver.manage()
-                .window()
-                .maximize();
-        driver.navigate()
-                .to("https://www.wikipedia.org/");
+        driverManager.createDriver();
+        driver = driverManager.getDriver();
+        driver.manage().window().maximize();
+        driver.navigate().to("https://www.wikipedia.org/");
     }
 
     @After
     public void tearDown(Scenario scenario){
-        //Aquí va el screenshot
         if(scenario.isFailed()){
             TakesScreenshot screenshotTaking = (TakesScreenshot) driver;
             byte[] screenshot = screenshotTaking.getScreenshotAs(OutputType.BYTES);
@@ -33,4 +38,6 @@ public class BasePageSteps {
         }
         driver.quit();
     }
+
+
 }
