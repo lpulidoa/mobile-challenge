@@ -6,21 +6,22 @@ import io.cucumber.java.en.When;
 import org.openqa.selenium.WebDriver;
 import pages.LandingPage;
 
-import java.sql.Driver;
+import static steps.BasePageSteps.driver;
 
 
 public class LandingPageSteps{
 
-    private WebDriver driver;
-    private DriverHelper driverHelper;
-    public LandingPageSteps(DriverHelper driverHelper) {
+//    private WebDriver driver;
+//    private DriverHelper driverHelper;
+//    public LandingPageSteps(DriverHelper driverHelper) {
+//
+//        this.driverHelper = driverHelper;
+//        driver = driverHelper.getDriver();
+//
+//    }
+//    LandingPage landingPage = new LandingPage(driverHelper.getDriver());
 
-        this.driverHelper = driverHelper;
-        driver = driverHelper.getDriver();
-
-    }
-
-    LandingPage landingPage = new LandingPage(driverHelper.getDriver());
+    LandingPage landingPage = new LandingPage(driver);
 
     @Given("the user wants to make a search")
     public void theUserWantsToMakeASearch() {

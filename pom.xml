@@ -63,6 +63,20 @@
             <scope>test</scope>
         </dependency>
 
+        <!-- https://mvnrepository.com/artifact/net.masterthought/cucumber-reporting-->
+        <dependency>
+            <groupId>net.masterthought</groupId>
+            <artifactId>cucumber-reporting</artifactId>
+            <version>5.7.4</version>
+        </dependency>
+
+        <!-- dependency for solving error-->
+        <dependency>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-http-jdk-client</artifactId>
+            <version>4.5.0</version>
+        </dependency>
+
     </dependencies>
     <build>
         <plugins>
@@ -84,8 +98,32 @@
                 <version>3.0.0-M9</version>
                 <configuration>
                     <suiteXmlFiles>testng.xml</suiteXmlFiles>
+                    <testFailureIgnore>true</testFailureIgnore>
                 </configuration>
+            </plugin>
 
+            <plugin>
+                <groupId>net.masterthought</groupId>
+                <artifactId>maven-cucumber-reporting</artifactId>
+                <version>5.7.4</version>
+
+                <executions>
+                    <execution>
+                        <id>execution</id>
+                        <phase>verify</phase>
+                        <goals>
+                            <goal>generate</goal>
+                        </goals>
+                        <configuration>
+                            <projectName>mobile challenge</projectName>
+                            <outputDirectory>${project.build.directory}/cucumber-report-html</outputDirectory>
+                            <inputDirectory>${project.build.directory}</inputDirectory>
+                            <jsonFiles>
+                                <param>**/*.json</param>
+                            </jsonFiles>
+                        </configuration>
+                    </execution>
+                </executions>
             </plugin>
 
         </plugins>

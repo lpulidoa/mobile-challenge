@@ -8,26 +8,26 @@ import pages.LandingPage;
 
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.equalTo;
+import static steps.BasePageSteps.driver;
 
 
+public class ArticlePageSteps{
 
-public class ArticlePageSteps {
-
-    private WebDriver driver;
-    private DriverHelper driverHelper;
-    public ArticlePageSteps(DriverHelper driverHelper) {
-
-        this.driverHelper = driverHelper;
-
-    }
+//    private WebDriver driver;
+//    private DriverHelper driverHelper;
+//    public ArticlePageSteps(DriverHelper driverHelper) {
+//
+//        this.driverHelper = driverHelper;
+//
+//    }
 
     @Then("the user should get the correct article page in the first result")
     public void theUserShouldGetTheCorrectArticlePageInTheFirstResult() {
 
-        ArticlePage articlePage = new LandingPage(driverHelper.getDriver()).clickFirstResult();
+        ArticlePage articlePage = new LandingPage(driver).clickFirstResult();
 
         assertThat("The title was not correct",
-                articlePage.getTitle(), equalTo("Colombia"));
+                articlePage.getTitle(), equalTo("Endava"));
     }
 
 }

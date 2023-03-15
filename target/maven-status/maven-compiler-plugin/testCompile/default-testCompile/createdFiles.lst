@@ -4,5 +4,6 @@ steps\LandingPageSteps.class
 pages\ArticlePage.class
 pages\LandingPage.class
 steps\ArticlePageSteps.class
-steps\Hooks.class
 Runner.class
+Hooks.class
+steps\BasePageSteps.class
