@@ -1,13 +1,39 @@
 -------------------------------------------------------------------------------
 Test set: TestSuite
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 8.258 s <<< FAILURE! - in TestSuite
-Runner.runScenario["Successful search bar result", "landing page"](1)  Time elapsed: 6.757 s  <<< FAILURE!
-java.lang.AssertionError: 
-The title was not correct
-Expected: "Endava"
-     but: was "Endavant - Organizatció Socialista d'Alliberament Nacional"
-	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
-	at steps.ArticlePageSteps.theUserShouldGetTheCorrectArticlePageInTheFirstResult(ArticlePageSteps.java:27)
-	at ✽.the user should get the correct article page in the first result(file:///C:/Users/MARIANA/Desktop/Pasantía/Challenges/mobile-challenge/src/test/resources/features/landing_page.feature:6)
+Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 96.357 s <<< FAILURE! - in TestSuite
+Runner.runScenario["Successful search skipping login", "Search"](1)  Time elapsed: 93.426 s  <<< FAILURE!
+org.openqa.selenium.NoSuchElementException: 
+An element could not be located on the page using the given search parameters.
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-G3L0C0N', ip: '192.168.1.5', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.6'
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities {appActivity: com.imdb.mobile.HomeActivity, appPackage: com.imdb.mobile, automationName: UiAutomator2, databaseEnabled: false, desired: {appActivity: com.imdb.mobile.HomeActivity, appPackage: com.imdb.mobile, automationName: UiAutomator2, deviceName: emulator-5554, platformName: android, platformVersion: 13.0}, deviceApiLevel: 33, deviceManufacturer: Google, deviceModel: sdk_gphone64_x86_64, deviceName: emulator-5554, deviceScreenDensity: 420, deviceScreenSize: 1080x1920, deviceUDID: emulator-5554, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, pixelRatio: 2.625, platform: LINUX, platformName: Android, platformVersion: 13, statBarHeight: 63, takesScreenshot: true, viewportRect: {height: 1794, left: 0, top: 63, width: 1080}, warnings: {}, webStorageEnabled: false}
+Session ID: fe8aa869-8185-469f-85a1-c52a4deb1644
+*** Element info: {Using=-android uiautomator, value=UiSelector().resourceId("com.imdb.mobile:id/plot_overview")}
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:239)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:41)
+	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:61)
+	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+	at io.appium.java_client.FindsByAndroidUIAutomator.findElementByAndroidUIAutomator(FindsByAndroidUIAutomator.java:38)
+	at adapter.bases.BaseMobileScreen.locateElementUiSelector(BaseMobileScreen.java:22)
+	at adapter.bases.BaseMobileScreen.waitForElementPresence(BaseMobileScreen.java:31)
+	at adapter.screens.MovieScreen.getPlotOverview(MovieScreen.java:17)
+	at steps.MovieSteps.theUserShouldSeeTheCorrectMovieOverviewInTheFirstResult(MovieSteps.java:14)
+	at ✽.the user should see the correct movie overview in the first result(file:///C:/Users/MARIANA/Desktop/Pasantía/Challenges/mobile-challenge/src/test/resources/features/imdb_not_logged_search.feature:5)
 

@@ -2,58 +2,89 @@
 <testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-03-15T12:58:45 COT" name="Regression" finished-at="2023-03-15T12:58:53 COT" duration-ms="7583">
+  <suite started-at="2023-03-16T14:25:55 COT" name="Regression" finished-at="2023-03-16T14:27:30 COT" duration-ms="94541">
     <groups>
       <group name="cucumber">
-        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:Runner@7f3b84b8]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
+        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:Runner@8dbdac1]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
       </group> <!-- cucumber -->
     </groups>
-    <test started-at="2023-03-15T12:58:45 COT" name="Demo" finished-at="2023-03-15T12:58:53 COT" duration-ms="7583">
+    <test started-at="2023-03-16T14:25:55 COT" name="Demo" finished-at="2023-03-16T14:27:30 COT" duration-ms="94541">
       <class name="Runner">
-        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:Runner@7f3b84b8]" started-at="2023-03-15T12:58:45 COT" name="setUpClass" finished-at="2023-03-15T12:58:46 COT" duration-ms="703" status="PASS">
+        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:Runner@8dbdac1]" started-at="2023-03-16T14:25:55 COT" name="setUpClass" finished-at="2023-03-16T14:25:56 COT" duration-ms="805" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@1665fa54]]>
+                <![CDATA[org.testng.TestRunner@69228e85]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:Runner@7f3b84b8]" started-at="2023-03-15T12:58:46 COT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-03-15T12:58:53 COT" duration-ms="6754" status="FAIL">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:Runner@8dbdac1]" started-at="2023-03-16T14:25:56 COT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-03-16T14:27:29 COT" duration-ms="93369" status="FAIL">
           <params>
             <param index="0">
               <value>
-                <![CDATA["Successful search bar result"]]>
+                <![CDATA["Successful search skipping login"]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA["landing page"]]>
+                <![CDATA["Search"]]>
               </value>
             </param>
           </params>
-          <exception class="java.lang.AssertionError">
+          <exception class="org.openqa.selenium.NoSuchElementException">
             <message>
-              <![CDATA[The title was not correct
-Expected: "Endava"
-     but: was "Endavant - Organizatció Socialista d'Alliberament Nacional"]]>
+              <![CDATA[An element could not be located on the page using the given search parameters.
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-G3L0C0N', ip: '192.168.1.5', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.6'
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities {appActivity: com.imdb.mobile.HomeActivity, appPackage: com.imdb.mobile, automationName: UiAutomator2, databaseEnabled: false, desired: {appActivity: com.imdb.mobile.HomeActivity, appPackage: com.imdb.mobile, automationName: UiAutomator2, deviceName: emulator-5554, platformName: android, platformVersion: 13.0}, deviceApiLevel: 33, deviceManufacturer: Google, deviceModel: sdk_gphone64_x86_64, deviceName: emulator-5554, deviceScreenDensity: 420, deviceScreenSize: 1080x1920, deviceUDID: emulator-5554, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, pixelRatio: 2.625, platform: LINUX, platformName: Android, platformVersion: 13, statBarHeight: 63, takesScreenshot: true, viewportRect: {height: 1794, left: 0, top: 63, width: 1080}, warnings: {}, webStorageEnabled: false}
+Session ID: fe8aa869-8185-469f-85a1-c52a4deb1644
+*** Element info: {Using=-android uiautomator, value=UiSelector().resourceId("com.imdb.mobile:id/plot_overview")}]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: The title was not correct
-Expected: "Endava"
-     but: was "Endavant - Organizatció Socialista d'Alliberament Nacional"
-at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
-at steps.ArticlePageSteps.theUserShouldGetTheCorrectArticlePageInTheFirstResult(ArticlePageSteps.java:27)
-at ✽.the user should get the correct article page in the first result(file:///C:/Users/MARIANA/Desktop/Pasantía/Challenges/mobile-challenge/src/test/resources/features/landing_page.feature:6)
+              <![CDATA[org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters.
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-G3L0C0N', ip: '192.168.1.5', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.6'
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities {appActivity: com.imdb.mobile.HomeActivity, appPackage: com.imdb.mobile, automationName: UiAutomator2, databaseEnabled: false, desired: {appActivity: com.imdb.mobile.HomeActivity, appPackage: com.imdb.mobile, automationName: UiAutomator2, deviceName: emulator-5554, platformName: android, platformVersion: 13.0}, deviceApiLevel: 33, deviceManufacturer: Google, deviceModel: sdk_gphone64_x86_64, deviceName: emulator-5554, deviceScreenDensity: 420, deviceScreenSize: 1080x1920, deviceUDID: emulator-5554, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, pixelRatio: 2.625, platform: LINUX, platformName: Android, platformVersion: 13, statBarHeight: 63, takesScreenshot: true, viewportRect: {height: 1794, left: 0, top: 63, width: 1080}, warnings: {}, webStorageEnabled: false}
+Session ID: fe8aa869-8185-469f-85a1-c52a4deb1644
+*** Element info: {Using=-android uiautomator, value=UiSelector().resourceId("com.imdb.mobile:id/plot_overview")}
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:239)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:41)
+at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
+at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:61)
+at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+at io.appium.java_client.FindsByAndroidUIAutomator.findElementByAndroidUIAutomator(FindsByAndroidUIAutomator.java:38)
+at adapter.bases.BaseMobileScreen.locateElementUiSelector(BaseMobileScreen.java:22)
+at adapter.bases.BaseMobileScreen.waitForElementPresence(BaseMobileScreen.java:31)
+at adapter.screens.MovieScreen.getPlotOverview(MovieScreen.java:17)
+at steps.MovieSteps.theUserShouldSeeTheCorrectMovieOverviewInTheFirstResult(MovieSteps.java:14)
+at ✽.the user should see the correct movie overview in the first result(file:///C:/Users/MARIANA/Desktop/Pasantía/Challenges/mobile-challenge/src/test/resources/features/imdb_not_logged_search.feature:5)
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:Runner@7f3b84b8]" started-at="2023-03-15T12:58:53 COT" name="tearDownClass" finished-at="2023-03-15T12:58:53 COT" duration-ms="72" status="PASS">
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:Runner@8dbdac1]" started-at="2023-03-16T14:27:29 COT" name="tearDownClass" finished-at="2023-03-16T14:27:30 COT" duration-ms="301" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->

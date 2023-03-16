@@ -103,7 +103,7 @@
                     <div class="method-list-content failed suite-Regression">
                       <span>
                         <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Regression" title="Runner" class="method navigator-link" hash-for-method="runScenario(&quot;Successful search bar result&quot;, &quot;landing page&quot;)">runScenario("Successful search bar result", "landing page")</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Regression" title="Runner" class="method navigator-link" hash-for-method="runScenario(&quot;Successful search skipping login&quot;, &quot;Search&quot;)">runScenario("Successful search skipping login", "Search")</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content failed suite-Regression -->
@@ -126,17 +126,38 @@
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="runScenario(&quot;Successful search bar result&quot;, &quot;landing page&quot;)">
-                  </a> <!-- runScenario("Successful search bar result", "landing page") -->
+                  <a name="runScenario(&quot;Successful search skipping login&quot;, &quot;Search&quot;)">
+                  </a> <!-- runScenario("Successful search skipping login", "Search") -->
                   <span class="method-name">runScenario</span>
-                  <span class="parameters">("Successful search bar result","landing page")</span>
-                  <div class="stack-trace">java.lang.AssertionError: The title was not correct
-Expected: &quot;Endava&quot;
-     but: was &quot;Endavant - Organizatció Socialista d&apos;Alliberament Nacional&quot;
-	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
-	at steps.ArticlePageSteps.theUserShouldGetTheCorrectArticlePageInTheFirstResult(ArticlePageSteps.java:27)
-	at ✽.the user should get the correct article page in the first result(file:///C:/Users/MARIANA/Desktop/Pasantía/Challenges/mobile-challenge/src/test/resources/features/landing_page.feature:6)
-
+                  <span class="parameters">("Successful search skipping login","Search")</span>
+                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters.
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;DESKTOP-G3L0C0N&apos;, ip: &apos;192.168.1.5&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.6&apos;
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities {appActivity: com.imdb.mobile.HomeActivity, appPackage: com.imdb.mobile, automationName: UiAutomator2, databaseEnabled: false, desired: {appActivity: com.imdb.mobile.HomeActivity, appPackage: com.imdb.mobile, automationName: UiAutomator2, deviceName: emulator-5554, platformName: android, platformVersion: 13.0}, deviceApiLevel: 33, deviceManufacturer: Google, deviceModel: sdk_gphone64_x86_64, deviceName: emulator-5554, deviceScreenDensity: 420, deviceScreenSize: 1080x1920, deviceUDID: emulator-5554, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, pixelRatio: 2.625, platform: LINUX, platformName: Android, platformVersion: 13, statBarHeight: 63, takesScreenshot: true, viewportRect: {height: 1794, left: 0, top: 63, width: 1080}, warnings: {}, webStorageEnabled: false}
+Session ID: fe8aa869-8185-469f-85a1-c52a4deb1644
+*** Element info: {Using=-android uiautomator, value=UiSelector().resourceId(&quot;com.imdb.mobile:id/plot_overview&quot;)}
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:239)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:41)
+	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:61)
+	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+	at io.appium.java_client.FindsByAndroidUIAutomator.findElementByAndroidUIAutomator(FindsByAndroidUIAutomator.java:38)
+	at adapter.bases.BaseMobileScreen.locateElementUiSelector(BaseMobileScreen.java:22)
+	at adapter.bases.BaseMobileScreen.waitForElementPresence(BaseMobileScreen.java:31)
+	at adapter.screens.MovieScreen.getPlotOverview(MovieScreen.java:17)
+	at steps.MovieSteps.theUserShouldSeeTheCorrectMovieOverviewInTheFirstResult(MovieSteps.java:14)
+	at ✽.the user should see the correct movie overview in the first result(file:///C:/Users/MARIANA/Desktop/Pasantía/Challenges/mobile-challenge/src/test/resources/features/imdb_not_logged_search.feature:5)
+... Removed 5 stack frames
 </div> <!-- stack-trace -->
                   <em>
 (Runs Cucumber Scenarios)                  </em>
@@ -208,12 +229,12 @@ data.addRows(1);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'runScenario')
 data.setCell(0, 2, 'Runner')
-data.setCell(0, 3, 6754);
+data.setCell(0, 3, 93369);
 window.suiteTableData['Regression']= { tableData: data, tableDiv: 'times-div-Regression'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 6 seconds</span>
+              <span class="suite-total-time">Total running time: 1 minutes</span>
               <div id="times-div-Regression">
               </div> <!-- times-div-Regression -->
             </div> <!-- times-div -->
@@ -241,18 +262,18 @@ return data;
             <div class="chronological-class">
               <div class="chronological-class-name">Runner</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
-                <span class="method-name">setUpClass(org.testng.TestRunner@1665fa54)</span>
+                <span class="method-name">setUpClass(org.testng.TestRunner@69228e85)</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
-                <span class="method-name">runScenario("Successful search bar result", "landing page")</span>
-                <span class="method-start">718 ms</span>
+                <span class="method-name">runScenario("Successful search skipping login", "Search")</span>
+                <span class="method-start">821 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">tearDownClass</span>
-                <span class="method-start">7481 ms</span>
+                <span class="method-start">94208 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

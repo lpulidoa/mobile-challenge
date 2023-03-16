@@ -57,9 +57,9 @@ function toggleAllBoxes() {
 <tr>
 <td>Tests passed/Failed/Skipped:</td><td>0/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Wed Mar 15 12:58:45 COT 2023</td>
+<td>Started on:</td><td>Thu Mar 16 14:25:55 COT 2023</td>
 </tr>
-<tr><td>Total time:</td><td>7 seconds (7583 ms)</td>
+<tr><td>Total time:</td><td>94 seconds (94541 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -76,23 +76,70 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='Runner.runScenario()'><b>runScenario</b><br>Test class: Runner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Successful search bar result", "landing page"</td>
-<td><div><pre>java.lang.AssertionError: The title was not correct
-Expected: &quot;Endava&quot;
-     but: was &quot;Endavant - Organizatció Socialista d&apos;Alliberament Nacional&quot;
-	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
-	at steps.ArticlePageSteps.theUserShouldGetTheCorrectArticlePageInTheFirstResult(ArticlePageSteps.java:27)
-	at ?.the user should get the correct article page in the first result(file:///C:/Users/MARIANA/Desktop/Pasantía/Challenges/mobile-challenge/src/test/resources/features/landing_page.feature:6)
-</pre></div><a href='#' onClick='toggleBox("stack-trace1846435308", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1846435308'><pre>java.lang.AssertionError: The title was not correct
-Expected: &quot;Endava&quot;
-     but: was &quot;Endavant - Organizatció Socialista d&apos;Alliberament Nacional&quot;
-	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
-	at steps.ArticlePageSteps.theUserShouldGetTheCorrectArticlePageInTheFirstResult(ArticlePageSteps.java:27)
-	at ?.the user should get the correct article page in the first result(file:///C:/Users/MARIANA/Desktop/Pasantía/Challenges/mobile-challenge/src/test/resources/features/landing_page.feature:6)
+<td title='Runner.runScenario()'><b>runScenario</b><br>Test class: Runner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Successful search skipping login", "Search"</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters.
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;DESKTOP-G3L0C0N&apos;, ip: &apos;192.168.1.5&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.6&apos;
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities {appActivity: com.imdb.mobile.HomeActivity, appPackage: com.imdb.mobile, automationName: UiAutomator2, databaseEnabled: false, desired: {appActivity: com.imdb.mobile.HomeActivity, appPackage: com.imdb.mobile, automationName: UiAutomator2, deviceName: emulator-5554, platformName: android, platformVersion: 13.0}, deviceApiLevel: 33, deviceManufacturer: Google, deviceModel: sdk_gphone64_x86_64, deviceName: emulator-5554, deviceScreenDensity: 420, deviceScreenSize: 1080x1920, deviceUDID: emulator-5554, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, pixelRatio: 2.625, platform: LINUX, platformName: Android, platformVersion: 13, statBarHeight: 63, takesScreenshot: true, viewportRect: {height: 1794, left: 0, top: 63, width: 1080}, warnings: {}, webStorageEnabled: false}
+Session ID: fe8aa869-8185-469f-85a1-c52a4deb1644
+*** Element info: {Using=-android uiautomator, value=UiSelector().resourceId(&quot;com.imdb.mobile:id/plot_overview&quot;)}
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:239)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:41)
+	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:61)
+	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+	at io.appium.java_client.FindsByAndroidUIAutomator.findElementByAndroidUIAutomator(FindsByAndroidUIAutomator.java:38)
+	at adapter.bases.BaseMobileScreen.locateElementUiSelector(BaseMobileScreen.java:22)
+	at adapter.bases.BaseMobileScreen.waitForElementPresence(BaseMobileScreen.java:31)
+	at adapter.screens.MovieScreen.getPlotOverview(MovieScreen.java:17)
+	at steps.MovieSteps.theUserShouldSeeTheCorrectMovieOverviewInTheFirstResult(MovieSteps.java:14)
+	at ?.the user should see the correct movie overview in the first result(file:///C:/Users/MARIANA/Desktop/Pasantía/Challenges/mobile-challenge/src/test/resources/features/imdb_not_logged_search.feature:5)
+... Removed 5 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2050291306", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2050291306'><pre>org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters.
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;DESKTOP-G3L0C0N&apos;, ip: &apos;192.168.1.5&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.6&apos;
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities {appActivity: com.imdb.mobile.HomeActivity, appPackage: com.imdb.mobile, automationName: UiAutomator2, databaseEnabled: false, desired: {appActivity: com.imdb.mobile.HomeActivity, appPackage: com.imdb.mobile, automationName: UiAutomator2, deviceName: emulator-5554, platformName: android, platformVersion: 13.0}, deviceApiLevel: 33, deviceManufacturer: Google, deviceModel: sdk_gphone64_x86_64, deviceName: emulator-5554, deviceScreenDensity: 420, deviceScreenSize: 1080x1920, deviceUDID: emulator-5554, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, pixelRatio: 2.625, platform: LINUX, platformName: Android, platformVersion: 13, statBarHeight: 63, takesScreenshot: true, viewportRect: {height: 1794, left: 0, top: 63, width: 1080}, warnings: {}, webStorageEnabled: false}
+Session ID: fe8aa869-8185-469f-85a1-c52a4deb1644
+*** Element info: {Using=-android uiautomator, value=UiSelector().resourceId(&quot;com.imdb.mobile:id/plot_overview&quot;)}
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:239)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:41)
+	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:61)
+	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+	at io.appium.java_client.FindsByAndroidUIAutomator.findElementByAndroidUIAutomator(FindsByAndroidUIAutomator.java:38)
+	at adapter.bases.BaseMobileScreen.locateElementUiSelector(BaseMobileScreen.java:22)
+	at adapter.bases.BaseMobileScreen.waitForElementPresence(BaseMobileScreen.java:31)
+	at adapter.screens.MovieScreen.getPlotOverview(MovieScreen.java:17)
+	at steps.MovieSteps.theUserShouldSeeTheCorrectMovieOverviewInTheFirstResult(MovieSteps.java:14)
+	at ?.the user should see the correct movie overview in the first result(file:///C:/Users/MARIANA/Desktop/Pasantía/Challenges/mobile-challenge/src/test/resources/features/imdb_not_logged_search.feature:5)
 </pre></div></td>
-<td>6</td>
-<td>Runner@7f3b84b8</td></tr>
+<td>93</td>
+<td>Runner@8dbdac1</td></tr>
 </table><p>
 </body>
 </html>

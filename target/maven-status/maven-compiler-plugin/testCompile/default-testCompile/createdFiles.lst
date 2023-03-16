@@ -1,8 +1,6 @@
-pages\BasePage.class
-helpers\DriverManager.class
-steps\LandingPageSteps.class
-pages\ArticlePage.class
-pages\LandingPage.class
-steps\ArticlePageSteps.class
-steps\Hooks.class
+steps\LoginSteps.class
+MyTest.class
+steps\MovieSteps.class
+steps\SearchSteps.class
+steps\BaseMobileTest.class
 Runner.class

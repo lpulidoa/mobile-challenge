@@ -1,0 +1,10 @@
+core\ConfigCapabilities.class
+core\MobileAppDriver.class
+helpers\DriverManager.class
+adapter\screens\SearchScreen.class
+adapter\screens\GlobalNavigationScreen.class
+adapter\screens\LoginScreen.class
+adapter\screens\MovieScreen.class
+adapter\screens\SearchResultsScreen.class
+adapter\bases\BaseMobileScreen.class
+adapter\bases\BaseMobileTest.class
