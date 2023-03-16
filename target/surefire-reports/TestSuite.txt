@@ -1,0 +1,13 @@
+-------------------------------------------------------------------------------
+Test set: TestSuite
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 8.258 s <<< FAILURE! - in TestSuite
+Runner.runScenario["Successful search bar result", "landing page"](1)  Time elapsed: 6.757 s  <<< FAILURE!
+java.lang.AssertionError: 
+The title was not correct
+Expected: "Endava"
+     but: was "Endavant - Organizatció Socialista d'Alliberament Nacional"
+	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
+	at steps.ArticlePageSteps.theUserShouldGetTheCorrectArticlePageInTheFirstResult(ArticlePageSteps.java:27)
+	at ✽.the user should get the correct article page in the first result(file:///C:/Users/MARIANA/Desktop/Pasantía/Challenges/mobile-challenge/src/test/resources/features/landing_page.feature:6)
+
